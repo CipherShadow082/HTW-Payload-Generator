@@ -7,7 +7,6 @@ Ferramenta Python para geração automatizada de payloads do Metasploit com:
 
 🔹 **⚡ Configuração em 1-clique** (Quick Setup)  
 🔹 **🎨 Interface colorida** intuitiva  
-🔹 **🌐 Suporte a Ngrok** integrado  
 🔹 **📦 Geração multi-plataforma** (Android/Windows)  
 
 ## 🛠️ Funcionalidades Principais
